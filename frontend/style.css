@@ -1,0 +1,138 @@
+/* 1. Global Reset: Clears default browser margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* 2. Body Styling: Setting the base font and a clean light background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* A very soft, light gray */
+    color: #333333; /* Dark gray text for high contrast and readability */
+    line-height: 1.6;
+}
+
+/* 3. Header Styling: Adding padding and a white background */
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* 4. Navigation Styling: Removing bullet points and making links horizontal */
+nav ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0056b3; /* A crisp blue */
+    font-weight: bold;
+}
+
+/* 5. Main Content: Giving the sections some breathing room (Margin & Padding) */
+main {
+    max-width: 800px; /* Prevents text from stretching too wide on big screens */
+    margin: 40px auto; /* Centers the main block on the page */
+    padding: 0 20px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* A very subtle shadow */
+}
+
+/* 7. Flexbox Layouts: The About Section */
+.about-content {
+    display: flex;          /* Turns this div into a flex container */
+    align-items: center;    /* Vertically centers the text with the image */
+    gap: 30px;              /* Adds exactly 30px of space between the img and text */
+    margin-top: 15px;
+}
+
+.about-content img {
+    border-radius: 50%;     /* Turns the square image into a perfect circle */
+    width: 150px;           /* Locks the image width */
+    height: 150px;          /* Locks the image height */
+    object-fit: cover;      /* Ensures the image doesn't stretch weirdly */
+}
+
+
+/* 6. Form Styling: Making the inputs look clickable */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #004494; /* Darkens slightly when hovered */
+}
+/* 8. Responsive Design: Mobile Breakpoint */
+@media (max-width: 768px) {
+    /* When the screen is 768px wide or smaller, run these rules: */
+
+    /* Stack the navigation links vertically */
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Stack the About section vertically like a mobile app view */
+    .about-content {
+        flex-direction: column; 
+        text-align: center;
+        gap: 15px; /* Reduce the gap slightly for smaller screens */
+    }
+
+    /* Make the form inputs take up the whole screen width */
+    input, textarea {
+        width: 100%;
+    }
+    
+    /* Give the main container a bit less margin on small screens */
+    main {
+        margin: 20px auto; 
+    }
+
+    /* 9. Dark Mode Theme */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header, 
+body.dark-mode section {
+    background-color: #1e1e1e;
+    border-color: #333333;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.05);
+}
+
+body.dark-mode nav a {
+    color: #66b3ff; /* Lighter blue for dark backgrounds */
+}
+
+}
