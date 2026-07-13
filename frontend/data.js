@@ -122,11 +122,11 @@ const portfolioData = {
     },
     // --- NEW SECTIONS ---
     credentials: {
-        resumeLink: "https://link-to-your-google-drive-pdf.com", // <-- Add your resume link
+        resumeLink: "https://docs.google.com/document/d/1fAHfnGmiNsjhSZekGeHg1Zqxygt7Mg9-/edit?usp=drivesdk&ouid=110596995064096636656&rtpof=true&sd=true", // <-- Add your resume link
         certificate: {
             title: "Technical Training Program Certificate",
             date: "January 2026",
-            url: "https://link-to-your-certificate.com" // <-- Add your certificate link
+            url: "" // <-- Add your certificate link
         }
         
     },
