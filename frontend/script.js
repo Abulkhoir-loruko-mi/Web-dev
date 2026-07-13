@@ -48,28 +48,7 @@
 // --- DARK MODE LOGIC ---
 const themeToggleBtn = document.getElementById('theme-toggle');
 
-// 1. Check local storage when the page loads
-const currentTheme = localStorage.getItem('portfolio-theme');
 
-// 2. If the saved theme is 'dark', apply the class immediately
-if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-}
-
-// 3. Listen for clicks on the toggle button
-themeToggleBtn.addEventListener('click', () => {
-    // .toggle() adds the class if it's missing, and removes it if it's there
-    document.body.classList.toggle('dark-mode');
-    
-    // 4. Figure out which mode is currently active
-    let theme = 'light';
-    if (document.body.classList.contains('dark-mode')) {
-        theme = 'dark';
-    }
-    
-    // 5. Save that choice to local storage
-    localStorage.setItem('portfolio-theme', theme);
-});
 
 
 // --- 1. INJECT PERSONAL BIO ---
@@ -161,7 +140,7 @@ socialsList.innerHTML = portfolioData.socials
 const projectsList = document.getElementById('projects-list');
 projectsList.innerHTML = portfolioData.projects
     .map(project => `
-        <div class="project-card" style="background-color: #ffffff; padding: 20px; margin-bottom: 15px; border-radius: 8px; border-left: 4px solid #1A365D;border-right: 2px solid #1A365D; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+        <div class="project-card" style="background-color: #ffffff; padding: 5px; margin-bottom: 15px; margin-top:15px;  border-radius: 8px; border-left: 4px solid #1A365D;border-right: 2px solid #1A365D; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
             <h3 style="color: #1A365D; margin-bottom: 5px;">${project.title}</h3>
             <p style="color: #C05621; font-weight: bold; margin-bottom: 10px;">${project.role}</p>
             <p style="color: #2D3748; margin-bottom: 10px;">${project.description}</p>

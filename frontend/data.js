@@ -89,7 +89,7 @@ const portfolioData = {
     //     }
     // ],
     
-        projects: [
+    projects: [
         {
             title: "Hospital Overcrowding Management App",
             role: "Mobile Team Lead & QA Coordinator",
@@ -122,6 +122,7 @@ const portfolioData = {
     },
     // --- NEW SECTIONS ---
     credentials: {
+        //testplans,in resume
         resumeLink: "https://docs.google.com/document/d/1fAHfnGmiNsjhSZekGeHg1Zqxygt7Mg9-/edit?usp=drivesdk&ouid=110596995064096636656&rtpof=true&sd=true", // <-- Add your resume link
         certificate: {
             title: "Technical Training Program Certificate",
